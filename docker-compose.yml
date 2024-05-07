@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  console:
+    build: ./app-wenquan-console
+    image: app-wenquan-console-image
+    container_name: app-wenquan-console-container
+    ports:
+      - 11012:80
+
+  server:
+    build: ./app-wenquan-server
+    image: app-wenquan-server-image
+    container_name: app-wenquan-server-container
+    ports:
+      - 11011:11011
